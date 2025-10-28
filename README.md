@@ -36,7 +36,7 @@ A tiny, real Agentic-AI system that triages ops alerts using RAG + LLM, then pau
 ---
 
 ## 🧱 Architecture
-
+```
 Streamlit UI ──► FastAPI (/triage, /approvals/*)
 │ │
 │ ├─► Triaging Agent (LLM + rules)
@@ -47,7 +47,7 @@ Pending Approvals ▲
 └── Approve/Reject ───────────┘
 │
 └─► Executor (simulated) + actions.log (audit)
-
+```
 ---
 
 ## 🛠️ Prereqs
@@ -129,27 +129,28 @@ Sample line: 2025-10-28 16:56:14 | APPROVE | {"id": "...", "alert": "[db|high] .
 
 ### Key paths:
 
-src/ui/app.py – Streamlit UI
+- src/ui/app.py – Streamlit UI
 
-src/api/main.py – FastAPI endpoints (/triage, /approvals/*)
+- src/api/main.py – FastAPI endpoints (/triage, /approvals/*)
 
-src/agent/triage_agent.py – RAG + LLM logic
+- src/agent/triage_agent.py – RAG + LLM logic
 
-src/retrieval/vector_store.py – Chroma client + embedding function
+- src/retrieval/vector_store.py – Chroma client + embedding function
 
-src/hitl/human_loop.py – queue + approval resolution
+- src/hitl/human_loop.py – queue + approval resolution
 
-src/utils/{store.py, executor.py, actions.py} – state, simulated executor, audit log
+- src/utils/{store.py, executor.py, actions.py} – state, simulated executor, audit log
 
-data/chroma_local/ – local Chroma persistent store
+- data/chroma_local/ – local Chroma persistent store
 
-data/actions.log – audit trail (git-ignored)
+- data/actions.log – audit trail (git-ignored)
 
 ---
 
 ### Troubleshooting
 
 InvalidDimensionException (384 vs 1536)
+
 You seeded with one embedding type and queried with another. Fix:
 
 Set OFFLINE_EMBED consistently, then:
@@ -173,11 +174,11 @@ env OLLAMA_MODELS=$HOME/.ollama ollama pull llama3.1
 ---
 
 ### Tests & lint
-
+```
 make fmt     # black + ruff --fix
 make lint    # ruff + black --check
 pytest       # (add tests under tests/)
-
+```
 ---
 
 ### License
