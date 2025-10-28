@@ -91,10 +91,10 @@ make embed
 
 ### 4) Run the app
 
-# terminal A
+terminal A
 make run-api     # http://localhost:8000 (Swagger: /docs)
 
-# terminal B
+terminal B
 make run-ui      # http://localhost:8501
 
 ---
