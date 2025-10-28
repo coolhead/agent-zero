@@ -27,12 +27,6 @@ A tiny, real Agentic-AI system that triages ops alerts using RAG + LLM, then pau
   <img src="docs/actions-log.jpg" width="800">
 </p>
 
-
-
-
-
-
-
 ---
 
 ## 🧱 Architecture
@@ -79,7 +73,7 @@ OFFLINE_EMBED=false
 
 CONFIDENCE_THRESHOLD=0.65
 API_URL=http://localhost:8000
-
+```
 ---
 
 ### 3) Seed RAG memory
