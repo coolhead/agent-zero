@@ -1,0 +1,5 @@
+service,severity,message,action
+payments,high,HTTP 500 spike on /charge retry loop,restart deployment and roll back last config
+auth,medium,JWT validation latency p95 > 400ms,scale replicas to 3 and warm cache
+db,high,Connection pool exhausted under load,raise max_pool to 50 and add read replica
+kafka,low,Consumer group lag minor on topic events,observe; alert threshold x2 if persists
