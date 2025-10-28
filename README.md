@@ -15,6 +15,24 @@ A tiny, real Agentic-AI system that triages ops alerts using RAG + LLM, then pau
 - **Action Log:** Every approval writes to `data/actions.log` (audit-proof)
 - **Switchable providers:** OpenAI (online, 1536-d) or Offline MiniLM (384-d)
 
+<p align="center">
+  <img src="docs/ui-triage.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="docs/pending_approval.jpg" width="800">
+</p>
+
+<p align="center">
+  <img src="docs/actions-log.jpg" width="800">
+</p>
+
+
+
+
+
+
+
 ---
 
 ## 🧱 Architecture
