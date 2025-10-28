@@ -1,5 +1,7 @@
 # Agent Zero – Ops Co-Pilot (HITL)
 
+_"Human-in-the-Loop Agent for Ops Automation"_
+
 A tiny, real Agentic-AI system that triages ops alerts using RAG + LLM, then pauses for **Human-In-The-Loop (HITL)** approval before executing remediations. Built with **FastAPI**, **Streamlit**, and **ChromaDB**.
 
 > Demo focus: **genAI + agents + safety**. Retrieval-augmented reasoning, confidence gating, approvals, and an **audit trail**.
